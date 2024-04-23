@@ -1,4 +1,4 @@
-import supabase from "../db/supabase";
+import supabase from "../clients/supabase";
 import { User } from "../model/user-model";
 
 // Function to create a new user
@@ -45,8 +45,6 @@ async function getUserById(userId: string): Promise<User | null> {
     throw error;
   }
 }
-
-
 
 // Function to delete a user
 async function deleteUser(userId: number): Promise<User | null> {
